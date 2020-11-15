@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /*estilo de practica css cool*/
+    body{
+        margin:0;
+        padding:0;
+        background-color: black;
+    }
+    #pattern {
+      background-image: url("images/pattern.png");
+      height: 100%;
+      width: 100%;
+      background-repeat: repeat-x;
+    }
+    #hero {
+       
+        height: 100%;
+        width: 100%;
+        animation-name:animacion;
+        animation-duration: 30s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+       background-size: cover;
+       background-repeat: no-repeat;
+       position: absolute;
+     
+    }
+   #hero #uno,#dos {
+       position: relative;
+       color: black;
+    
+       top: 30px;
+       
+   }
+   
+    @keyframes animacion {
+        0% {
+            background-image: url("images/img1.jpg");
+           
+        }
+        20% {
+            background-image: url("images/img2.jpg");
+        }
+        40% {
+            background-image: url("images/img3.jpg");
+        }
+        60% {
+            background-image: url("images/img4.jpg");
+        }
+        80% {
+            background-image: url("images/img5.jpg");
+        }
+        100% {
+            background-image: url("images/img6.jpg");
+        }
+    }
+ 
+    #intercambio {/*localizacion del texto en rojo*/
+        padding-top: 35%;
+        padding-left:60%;
+    }
+    /*estilo de borrar*/
+  .blink_me {
+  display: inline-block;
+  vertical-align: bottom;
+  animation: blinker 5s linear 1;
+  animation-delay: -1s;
+  
+}
+
+.blink_me span {
+  float: left;
+  overflow: hidden;
+  animation: hideShow 30s linear infinite;
+  color:red;
+  font-size: 70px;
+}
+
+.blink_me span:nth-child(1) { animation-delay: -6s; }
+.blink_me span:nth-child(5) { animation-delay: -12s; }
+.blink_me span:nth-child(4) { animation-delay: -18s ; }
+.blink_me span:nth-child(3) { animation-delay: -24s; }
+.blink_me span:nth-child(2) { animation-delay: -30s; }
+
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes hideShow {
+  0%, 16.6%, 33.33%, 100% { width: 0; }
+  16.66%, 33.3% { width: auto; }
+}
+    </style>
+<body>
+    <!--html de practica css cool-->
+   <div id="pattern">
+    <div id="hero">
+        <p id="uno">CSS3 PRACTICA UNO</p>
+        <p id="dos">Creado solo con CSS background-images</p>        
+        <p id="intercambio">
+         
+            <span class="blink_me" id="rotate">
+              <span>CSS3</span>
+              <span>Desarrollo</span>
+              <span>Interfaces</span>
+              <span>2DAM</span>
+              <span>IESCAMPANILLAS</span>
+            
+            </span> 
+        
+          </p>
+        
+
+    </div>
+    </div>
+ 
+    <!--html de borrar
+    <p>
+        Here is a sentence 
+        <span class="blink_me" id="rotate">
+          <span>test1</span>
+          <span>bob</span>
+          <span>next</span>
+          <span>last</span>
+          <span>PABLO</span>
+          <span>ANDRES</span>
+        </span> 
+        is what changes
+      </p>
+    --> 
+</body>
+</html>
